@@ -1,0 +1,97 @@
+\documentclass{article}
+\usepackage[lmargin=1in, rmargin=1in, tmargin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{bold-extra}
+
+\newcommand{\titleofscript}[2]{
+    \vspace*{\fill}
+        \begingroup
+        \centering
+        \texttt{\underline{#1}}
+            
+            \
+            
+            \texttt{Written by}
+            
+            \
+            
+            \texttt{#2}
+            
+        \endgroup
+    \vspace*{\fill}
+    
+    \pagebreak
+    
+}
+
+% scene transitions, ex: 'FADE IN:'
+\newcommand{\transition}[1]{
+
+    \MakeUppercase{\underline{\texttt{#1}}}
+    
+    \
+    
+}
+
+% Scene Heading, ex: INT. SCIENCE BUILDING (CONTINUOUS) - DAY
+\newcommand{\sceneheading}[1]{
+    
+    \MakeUppercase{\textbf{\texttt{#1}}}
+    
+    \
+    
+}
+
+% Adds action to the scene
+\newcommand{\action}[1]{
+
+    \texttt{#1}
+    
+    \
+    
+}
+
+% Formats the character's name
+\newcommand{\character}[1]{
+
+    \centering 
+    \MakeUppercase{
+        \texttt{
+            #1 % character's name
+        }
+    }
+    
+}
+
+% Adds parenthetical
+\newcommand{\parenthetical}[1]{
+
+    \centering
+    \texttt{(#1)}
+    
+}
+
+% shrinks the width of dialogue boxes
+\newcommand{\dialogue}[1]{
+
+    \centering
+    \parbox{0.45\textwidth}{
+        \texttt{#1}
+    }
+    
+    \
+    
+}
+
+\begin{document}
+
+\titleofscript{The Example}{Ryan Jones}
+
+\transition{fade in:}
+\sceneheading{int. science building (continuous) - day}
+\action{Julia slams down the receiver with a CRASH.}
+\character{julia child}
+\parenthetical{Vehemently}
+\dialogue{Well I simply do not understand why you can't just call them now. It's positively \underline{preposterous}!}
+
+\end{document}
